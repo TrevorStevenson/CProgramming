@@ -16,11 +16,6 @@ typedef struct LinkedList
 
 } LinkedList;
 
-void add(LinkedList *head, int data);
-void delete(LinkedList *list, int data);
-void destroy(LinkedList *list);
-bool hasCycle(Node *head);
-
 void add(LinkedList *list, int data)
 {
     Node *current = list->head;

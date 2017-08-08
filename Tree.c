@@ -16,11 +16,11 @@ void add(Tree *tree, int value)
 {
     Node *current = tree->root;
 
-    while (current != NULL)
+    while (current)
     {
         if (value >= current->value)
         {
-            if (current->left == NULL)
+            if (!current->left)
             {
                 current->left = Node(value);
                 return;
@@ -30,7 +30,7 @@ void add(Tree *tree, int value)
         }
         else
         {
-            if (current->right == NULL)
+            if (!current->right)
             {
                 current->right = Node(value);
                 return;

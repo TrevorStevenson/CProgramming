@@ -20,7 +20,7 @@ void add(LinkedList *list, int data)
 {
     Node *current = list->head;
 
-    if (current == NULL)
+    if (!current)
     {
         Node *head = (Node *) malloc(sizeof(Node));
         head->data = data;
@@ -29,7 +29,7 @@ void add(LinkedList *list, int data)
         return;
     }
 
-    while(current->next != NULL)
+    while(current->next)
     {
         current = current->next;
     }
@@ -44,9 +44,9 @@ void delete(LinkedList *list, int data)
     Node *current = list->head;
     Node *previous = NULL;
 
-    while(current != NULL)
+    while(current)
     {
-        if (current->data == data && previous != NULL)
+        if (current->data == data && previous)
         {
             previous->next = current->next;
             free(current);
@@ -65,7 +65,7 @@ void destroy(LinkedList *list)
 {
     Node *current = list->head;
 
-    while (current != NULL)
+    while (current)
     {
         Node *temp = current;
         current = current->next;

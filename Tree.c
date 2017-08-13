@@ -40,3 +40,27 @@ void add(Tree *tree, int value)
         }
     }
 }
+
+Node find(Tree *tree, int value)
+{
+    Node *current = tree->root;
+
+    while (current)
+    {
+        if (current->value == value)
+        {
+            return current;
+        }
+
+        if (value <= current-> value)
+        {
+            current = current->left;
+        }
+        else
+        {
+            current = current->right;
+        }
+    }
+
+    return NULL;
+}

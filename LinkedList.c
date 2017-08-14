@@ -1,20 +1,6 @@
 #include "LinkedList.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
-
-typedef struct Node
-{
-    struct Node *next;
-    int data;
-} Node;
-
-typedef struct LinkedList
-{
-    Node *head;
-    int size;
-
-} LinkedList;
 
 void add(LinkedList *list, int data)
 {

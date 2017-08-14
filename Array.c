@@ -1,16 +1,5 @@
 #include <stdlib.h>
-
-typedef struct Array;
-
-Array * createArray();
-void add(Array *array, int item);
-
-typedef struct Array
-{
-    int size;
-    int capacity;
-    void *items;
-} Array;
+#include "Array.h"
 
 Array * createArray()
 {

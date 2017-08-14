@@ -1,16 +1,5 @@
 #include <stdlib.h>
-
-typedef struct Node
-{
-    Node *left;
-    Node *right;
-    int value;
-} Node;
-
-typedef struct Tree
-{
-    Node *root
-} Tree;
+#include "Tree.h"
 
 void add(Tree *tree, int value)
 {

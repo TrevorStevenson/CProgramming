@@ -3,20 +3,22 @@
 
 Array * createArray()
 {
-    Array *array = (Array *) malloc(sizeof Array);
+    Array *array = (Array *) malloc(sizeof(Array));
     array->size = 0;
     array->capacity = 1;
-    array->items = void[capacity];
+    int items[array->capacity];
+    array->items = items;
+    return array;
 }
 
-Array * add(Array *array, int item)
+void add(Array *array, int item)
 {
-    if (size + 1 > capacity)
+    if (array->size + 1 > array->capacity)
     {
-        capacity *= 2;
-        int newArray[capacity];
+        array->capacity *= 2;
+        int newArray[array->capacity];
 
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < array->size; i++)
         {
             newArray[i] = array->items[i];
         }
@@ -25,9 +27,8 @@ Array * add(Array *array, int item)
     }
     else
     {
-        array[array->size] = item;
+        array->items[array->size] = item;
     }
 
     array->size++;
-    return array;
 }

@@ -5,7 +5,7 @@ typedef struct Array
 {
     int size;
     int capacity;
-    void *items;
+    int *items;
 } Array;
 
 Array * createArray();

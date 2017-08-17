@@ -32,3 +32,21 @@ void add(Array *array, int item)
 
     array->size++;
 }
+
+void delete(Array *array, int item)
+{
+    int newArray[array->capacity];
+    int j = 0;
+
+    for (int i = 0; i < array->size; i++)
+    {
+        if (array->items[i] != item)
+        {
+            newArray[j] = array->items[i];
+            j++;
+        }
+    }
+
+    array->items = newArray;
+    array->size--;
+}

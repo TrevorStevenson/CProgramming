@@ -15,7 +15,7 @@ void add(LinkedList *list, int data)
         return;
     }
 
-    while(current->next)
+    while (current->next)
     {
         current = current->next;
     }
@@ -30,7 +30,7 @@ void delete(LinkedList *list, int data)
     Node *current = list->head;
     Node *previous = NULL;
 
-    while(current)
+    while (current)
     {
         if (current->data == data && previous)
         {

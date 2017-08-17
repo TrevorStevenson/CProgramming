@@ -10,5 +10,6 @@ typedef struct Array
 
 Array * createArray();
 void add(Array *array, int item);
+void delete(Array *array, int item);
 
 #endif

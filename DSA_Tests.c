@@ -1,4 +1,5 @@
 #include "Array.h"
+#include <CUnit/CUnit.h>
 
 void testArray();
 
@@ -14,4 +15,5 @@ void testArray()
     add(array, 3);
     add(array, 5);
     add(array, 6);
+    CU_ASSERT(3 == 3);
 }
